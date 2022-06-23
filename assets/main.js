@@ -64,7 +64,6 @@ let doComputerGuess = () => {
             compWins.textContent = (parseInt(compWins.textContent) + 1).toString()
         }
         numOfTries+=1
-        console.log(numOfTries)
     }
 
     if(numOfTries == 5){
