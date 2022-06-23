@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>Coin Flip</title>
+  <link href="./assets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+  <div class="main-container">
+
+    <div class="user-option">
+        <p>Choose Your Guess</p><br>
+        <div id="user-choices">
+            <label for="heads">Heads</label>
+            <input id="heads" type="radio" name="guess" value="1">
+            <label for="tails">Tails</label>
+            <input id="tails" type="radio" name="guess" value="0">
+        </div>
+    </div>
+
+    <div id="image-container">
+        <img id="coin-image" src="./assets/images/aqua-color-solid-background-1920x1080.png">
+        <br>
+        <button type="button" id="flip-coin">Flip Coin</button>
+    </div>
+
+    <div class="computer-option">
+        <p>Computer Guess</p><br>
+        <p id="computer-guess">Heads</p>
+    </div>
+<br>
+    
+  </div>
+  <h2>Results</h2>
+  <div class="result-counter">
+   
+    <div class="individual-count">
+        <h3>Total Plays</h3>
+        <p id="total-plays">0</p>
+    </div>
+
+    <div class="individual-count">
+        <h3>Computer Wins</h3>
+        <p id="user-wins">0</p>
+    </div>
+
+    <div class="individual-count">
+        <h3>User Wins</h3>
+        <p id="computer-wins">0</p>
+    </div>
+
+</div>
+
+<h1 id="final-result">Game Over. Win</h1>
+<button type="button" id="reset">Reset</button>
+  <script src="./assets/main.js"></script>
+</body>
+
+</html>
