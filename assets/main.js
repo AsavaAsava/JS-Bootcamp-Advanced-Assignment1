@@ -37,8 +37,9 @@ let doComputerGuess = () => {
     }
 }
 
-while(numOfTries<5){
+
     flipButton.addEventListener('click', () => {
+        if(numOfTries<5){
         let userChoice = document.querySelector('input[name="guess"]:checked').value;
         doCoinFlip();
         doComputerGuess();
@@ -50,9 +51,10 @@ while(numOfTries<5){
             compWins.textContent = (parseInt(compWins.textContent) + 1).toString()
         }
         numOfTries++
+    }
       })
     
-}
+
 if ((parseInt(userWins.textContent)) > (parseInt(compWins.textContent))){
     finalOutput.textContent("Game Over. You Win!");
 }
