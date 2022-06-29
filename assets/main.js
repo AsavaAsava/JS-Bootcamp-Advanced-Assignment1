@@ -52,14 +52,16 @@ let doComputerGuess = () => {
         doCoinFlip();
         doComputerGuess();
         totalPlays.textContent = (parseInt(totalPlays.textContent) + 1).toString()
-        if(userChoice == compGuessResult){
+        if(userChoice == compGuessResult == flipResult){
             finalOutput.textContent= "Tied!"
+            userWins.textContent = (parseInt(userWins.textContent) + 1).toString()
+            compWins.textContent = (parseInt(compWins.textContent) + 1).toString()
         }
-        else if(userChoice == flipResult){
+        if(userChoice == flipResult){
             finalOutput.textContent= "User Wins!"
             userWins.textContent = (parseInt(userWins.textContent) + 1).toString()
         }
-        else if(compGuessResult == flipResult){
+        if(compGuessResult == flipResult){
             finalOutput.textContent= "Computer Wins!"
             compWins.textContent = (parseInt(compWins.textContent) + 1).toString()
         }
@@ -74,7 +76,7 @@ let doComputerGuess = () => {
             finalOutput.textContent= "Game Over. Computer Wins!"
         }
         else {
-            finalOutput.textContent = "Tie"
+            finalOutput.textContent = "Game Over. Tie"
         }
         }
         
